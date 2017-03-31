@@ -1,0 +1,495 @@
+/*The common styles for the whole document*/
+
+body{
+	background:black;
+	position:relative;
+}
+
+.clr{
+	clear:both;
+}
+
+.flt_left{
+	float:left;
+}
+
+.col132{
+	color:rgb(132,148,171);
+}
+
+.width_25{
+	width:25%;
+}
+
+/*Styles of the main content*/
+.wrapper{
+	margin:auto;
+	padding:auto;
+	position:relative;
+}
+
+/*Styles of the left panel - menu*/
+.wrapper_left{
+	height:100%;
+	background:rgb(25,28,36);
+}
+
+.wrapper_left_menu{
+	list-style:none;
+
+}
+
+.wrapper_left_menu_item:hover, .wrapper_left_menu_item_active,.wrapper_left_menu_item:last-child{
+	background:rgb(42,45,55);
+}
+
+.wrapper_left_menu_item>a{
+	color:white;
+	text-decoration:none;
+}
+
+.wrapper_left_menu_item>a:hover, .wrapper_left_menu_item_active>a, .wrapper_left_menu_item:last-child>a{
+	color:rgb(153,153,153);
+	text-decoration:none;
+}
+
+/*Styles of the right panel - menu*/
+.wrapper_right{
+	height:100%;
+	background:rgb(247,248,248);
+	position:relative;
+}
+
+/*Styles of the right panel - menu*/
+
+.wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
+	position:relative;
+}
+
+.wrapper_right_personal{
+	color:rgb(132,148,171);
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	background:rgb(228,233,238);
+}
+
+.wrapper_right_personal_form_cvc_num{
+	float:right;
+	width:60%;
+	text-align:right;
+	font-size:0.9em;
+	}
+
+.wrapper_right_personal_button{
+	background:rgb(0,83,177);
+	color:white;
+}
+
+.wrapper_right_footer{
+	background:rgb(55,60,67);
+	color:rgb(153,153,153);
+}
+
+@media screen and (min-width:1000px)
+{
+/*Common styles*/	
+	
+input, select{
+	padding:5px;
+}
+
+.sm_margin{
+	margin:5px auto;
+	padding:0px;
+}	
+	
+.wrapper{
+	width:80%;
+}
+	
+/*Styles of the left panel - menu*/
+
+.wrapper_left{
+	width:30%;
+}
+
+.wrapper_left_menu_item{
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	margin-left:-40px;
+}
+
+/*Styles of the right panel - menu*/
+
+.wrapper_right{
+	width:70%;
+}
+
+.wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
+		padding:20px;
+}
+
+.wrapper_right_personal_form_card{
+	position:absolute;
+	z-index:10;
+	top:25%;
+	display:inline-block;
+	width:52%;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+}
+
+.wrapper_right_personal_form_card_name{
+	width:90%;
+}
+
+ .wrapper_right_personal_form_cvc{
+	float:right;
+	display:inline-block;
+	width:52%;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+	overflow:hidden;
+}
+
+.wrapper_right_personal_form_card{
+	border-radius:20px;
+	padding:10px 10px 30px;
+}
+
+ .wrapper_right_personal_form_cvc{
+	border-radius:20px;
+	padding:10px 30px 100px;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+.wrapper_right_personal_form_cvc_num{
+	margin-right:-5px;
+}
+
+.wrapper_right_personal_button{
+	border-radius:20px;
+	padding:5px 25px;
+}
+
+.wrapper_right_footer{
+	font-size:0.7em;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px)
+{
+/*Common styles*/	
+	
+input, select{
+	padding:5px;
+}
+	
+.sm_margin{
+	margin:5px auto;
+	padding:0px;
+}	
+	
+.wrapper{
+	width:100%;
+}
+/*Styles of the left panel - menu*/
+
+.wrapper_left{
+	width:30%;
+}
+
+.wrapper_left_menu_item{
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	margin-left:-40px;
+}
+
+/*Styles of the right panel*/
+
+.wrapper_right{
+	width:70%;
+}
+
+.wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
+	padding:20px;
+}
+
+
+.wrapper_right_personal_form_card{
+	position:absolute;
+	z-index:10;
+	top:25%;
+	display:inline-block;
+	width:52%;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+}
+
+.wrapper_right_personal_form_card_name{
+	width:90%;
+}
+
+ .wrapper_right_personal_form_cvc{
+	float:right;
+	display:inline-block;
+	width:52%;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+	overflow:hidden;
+}
+
+
+
+.wrapper_right_personal_form_card{
+	border-radius:20px;
+	padding:10px 10px 30px;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+
+ .wrapper_right_personal_form_cvc{
+	border-radius:20px;
+	padding:10px 30px 100px;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+.wrapper_right_personal_form_cvc_num{
+	margin-right:-5px;
+}
+
+.wrapper_right_personal_button{
+	border-radius:20px;
+	padding:5px 25px;
+}
+
+.wrapper_right_footer{
+	font-size:0.9em;
+}
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+	
+input, select{
+	padding:5px;
+}
+	
+.sm_margin{
+	margin:5px auto;
+	padding:0px;
+}	
+	
+.wrapper{
+	width:100%;
+}
+/*Styles of the left panel - menu*/
+
+.wrapper_left{
+	width:100%;
+}
+
+.wrapper_left_menu_item{
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	margin-left:-40px;
+	text-align:center;
+}
+
+/*Styles of the right panel*/
+
+.wrapper_right{
+	width:100%;
+}
+
+.wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
+	padding:20px;
+}
+
+.wrapper_right_personal_form_card{
+	position:relative;
+	width:70%;
+	margin:auto;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+}
+
+.wrapper_right_personal_form_card_name{
+	width:90%;
+}
+
+ .wrapper_right_personal_form_cvc{
+	 position:relative;
+	width:70%;
+	margin:auto;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+	overflow:hidden;
+}
+
+.wrapper_right_personal_form_card{
+	border-radius:20px;
+	padding:30px 30px 50px;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+
+ .wrapper_right_personal_form_cvc{
+	border-radius:20px;
+	padding:30px 30px 150px;
+}
+
+.wrapper_right_personal_form_card input.wrapper_right_personal_form_card_num{
+	width:17%;
+}
+
+.wrapper_right_personal_form_cvc_num input{
+	width:42%;
+}
+
+.wrapper_right_personal_form_card select{
+	width:15%;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+.wrapper_right_personal_form_cvc_num{
+	margin-right:-5px;
+}
+
+.wrapper_right_personal_button{
+	border-radius:20px;
+	padding:5px 25px;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+.wrapper_right_footer{
+	font-size:0.9em;
+}
+
+}
+@media screen and (max-width:480px)
+{
+input, select{
+	padding:5px;
+}
+	
+.sm_margin{
+	margin:5px auto;
+	padding:0px;
+}	
+	
+.wrapper{
+	width:100%;
+}
+/*Styles of the left panel - menu*/
+
+.wrapper_left{
+	width:100%;
+}
+
+.wrapper_left_menu_item{
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:0px;
+	margin-left:-40px;
+	text-align:center;
+}
+
+/*Styles of the right panel*/
+
+.wrapper_right{
+	width:100%;
+}
+
+.wrapper_right_header, .wrapper_right_personal h1{text-align:center;}
+
+.flt_left{width:100%;}
+
+.wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
+	padding:5px;
+}
+
+.wrapper_right_personal_form_card{
+	position:relative;
+	width:90%;
+	margin:auto;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+}
+
+.wrapper_right_personal_form_card_name{
+	width:90%;
+}
+
+ .wrapper_right_personal_form_cvc{
+	 position:relative;
+	width:90%;
+	margin:auto;
+	border:1px solid #eee;
+	background:rgb(247,248,248);
+	overflow:hidden;
+}
+
+.wrapper_right_personal_form_card{
+	border-radius:20px;
+	padding:10px 10px 10px;
+}
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+
+ .wrapper_right_personal_form_cvc{
+	border-radius:20px;
+	padding:30px 10px 50px;
+}
+
+
+.wrapper_right_personal_form_cvc_strip{
+	min-height:30px;
+	margin:10px -30px;
+}
+
+.wrapper_right_personal_form_cvc_num{
+	margin-right:-5px;
+}
+
+.wrapper_right_personal_button{
+	border-radius:20px;
+	padding:5px 25px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.wrapper_right_footer{
+	font-size:0.9em;
+}
+}

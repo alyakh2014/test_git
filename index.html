@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Тестовое задание</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="wrapper_left flt_left">
+			<ul class="wrapper_left_menu">
+				<li class="wrapper_left_menu_item"><a href="#">Личный кабинет</a></li>
+				<li class="wrapper_left_menu_item  wrapper_left_menu_item_active"><a href="#">Платежи</a></li>
+				<li class="wrapper_left_menu_item"><a href="#">История платежей</a></li>
+				<li class="wrapper_left_menu_item"><a href="#">Настройки</a></li>
+				<li class="wrapper_left_menu_item wrapper_left_menu_item_footer"><a href="#">Выйти</a></li>
+			</ul>
+		</div>
+		<div class="wrapper_right flt_left">
+			<div class="wrapper_right_header">
+				<p class="col132">Информация об оплате:</p>
+				<div class="wrapper_right_header_info">
+					<div class="flt_left col132 width_25">Номер счёта:</div>
+					<div class="flt_left">87123658716587</div>
+					<div class="clr"></div>
+				</div>
+				<div class="wrapper_right_header_info">
+					<div class="flt_left col132 width_25">Сумма платежа:</div>
+					<div class="flt_left">100 руб.</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="wrapper_right_personal">
+					<h1>Данные банковской карты</h1>
+					<form action="#" method="post" class="wrapper_right_personal_form" onsubmit="checkForm(this); return false;">
+						<div class="wrapper_right_personal_form_card">
+							<p class="sm_margin">Номер карты</p>
+							<input class="wrapper_right_personal_form_card_num" name="num1" size="2" maxlength="4" required pattern="\d{4}">
+							<input class="wrapper_right_personal_form_card_num" name="num2" size="2" maxlength="4" required pattern="\d{4}">
+							<input class="wrapper_right_personal_form_card_num" name="mun3" size="2" maxlength="4" required pattern="\d{4}">
+							<input class="wrapper_right_personal_form_card_num" name="mun4" size="2" maxlength="4" required pattern="\d{4}">	
+							<p class="sm_margin">Срок действия</p>
+							  <select name="month">
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							  </select>
+							  <select name="year">
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+							  </select>
+							  <br/><br/>
+							  <input name="name" placeholder="Держатель карты" required class="wrapper_right_personal_form_card_name" pattern="[A-Za-z]{3,}"/>
+						</div>
+						<div class="wrapper_right_personal_form_cvc">
+							<div class="wrapper_right_personal_form_cvc_strip"></div>
+							<div class="wrapper_right_personal_form_cvc_num">
+								Код CVV2/CVC2<br/>
+								<input name="cvc" size="9" pattern="\d{3}" maxlength="3" required/>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="clr"></div>
+					<input type="submit" class="wrapper_right_personal_button" value="Оплатить" onsubmit="check();">
+					</form>
+			</div>
+			<div class="wrapper_right_footer">
+			<p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+			<br/>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+			<br/>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+			<br/>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+			</div>
+		</div>
+		<div class="clr"></div>
+	</div>
+<script type="text/javascript">
+	function checkForm(x){
+			var form = x;
+			var flag = true;
+			for(var i=0; i < form.length; i++){
+				if(form.elements[i].type != "select-one" && form.elements[i].value == ""){
+					flag = false;
+					form.elements[i].style.border = "1px solid red";
+				}
+			}
+			
+	
+		  if(flag) form.submit();
+		  else {
+			alert("Заполните все поля!");
+		  }
+}
+	</script>
+</body>
+</html>
