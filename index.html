@@ -4,9 +4,11 @@
 	<meta charset="UTF-8"/>
 	<title>Тестовое задание</title>
 	<link rel="stylesheet" href="css/main.css" />
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<div class="wrapper">
+		<!-- Here is navigation -->
 		<div class="wrapper_left flt_left">
 			<ul class="wrapper_left_menu">
 				<li class="wrapper_left_menu_item"><a href="#">Личный кабинет</a></li>
@@ -16,30 +18,34 @@
 				<li class="wrapper_left_menu_item wrapper_left_menu_item_footer"><a href="#">Выйти</a></li>
 			</ul>
 		</div>
+		<!-- Here is main content for users -->
 		<div class="wrapper_right flt_left">
+			<!-- Block with information about payment -->
 			<div class="wrapper_right_header">
 				<p class="col132">Информация об оплате:</p>
 				<div class="wrapper_right_header_info">
-					<div class="flt_left col132 width_25">Номер счёта:</div>
-					<div class="flt_left">87123658716587</div>
+					<div class="wrapper_right_header_info_key">Номер счёта:</div>
+					<div class="wrapper_right_header_info_value">87123658716587</div>
 					<div class="clr"></div>
 				</div>
 				<div class="wrapper_right_header_info">
-					<div class="flt_left col132 width_25">Сумма платежа:</div>
-					<div class="flt_left">100 руб.</div>
+					<div class="wrapper_right_header_info_key">Сумма платежа:</div>
+					<div class="wrapper_right_header_info_value">100 руб.</div>
 					<div class="clr"></div>
 				</div>
 			</div>
+			<!-- Block with form, user must fill -->
 			<div class="wrapper_right_personal">
-					<h1>Данные банковской карты</h1>
+					<h2>Данные банковской карты</h2>
 					<form action="#" method="post" class="wrapper_right_personal_form" onsubmit="checkForm(this); return false;">
 						<div class="wrapper_right_personal_form_card">
 							<p class="sm_margin">Номер карты</p>
-							<input class="wrapper_right_personal_form_card_num" name="num1" size="2" maxlength="4" required pattern="\d{4}">
-							<input class="wrapper_right_personal_form_card_num" name="num2" size="2" maxlength="4" required pattern="\d{4}">
-							<input class="wrapper_right_personal_form_card_num" name="mun3" size="2" maxlength="4" required pattern="\d{4}">
-							<input class="wrapper_right_personal_form_card_num" name="mun4" size="2" maxlength="4" required pattern="\d{4}">	
+							<input type="text" class="wrapper_right_personal_form_card_num" name="num1" size="2" maxlength="4" required pattern="\d{4}"/>
+							<input type="text" class="wrapper_right_personal_form_card_num" name="num2" size="2" maxlength="4" required pattern="\d{4}"/>
+							<input type="text" class="wrapper_right_personal_form_card_num" name="mun3" size="2" maxlength="4" required pattern="\d{4}"/>
+							<input type="text" class="wrapper_right_personal_form_card_num" name="mun4" size="2" maxlength="4" required pattern="\d{4}"/>
 							<p class="sm_margin">Срок действия</p>
+							<div class="wrapper_right_personal_form_card_select">
 							  <select name="month">
 								<option value="01">01</option>
 								<option value="02">02</option>
@@ -54,6 +60,8 @@
 								<option value="11">11</option>
 								<option value="12">12</option>
 							  </select>
+							</div>
+							<div class="wrapper_right_personal_form_card_select">
 							  <select name="year">
 								<option value="2018">2018</option>
 								<option value="2019">2019</option>
@@ -61,47 +69,35 @@
 								<option value="2021">2021</option>
 								<option value="2022">2022</option>
 							  </select>
-							  <br/><br/>
+							</div>
+							<div class="clr"></div>
+							  <br/>
 							  <input name="name" placeholder="Держатель карты" required class="wrapper_right_personal_form_card_name" pattern="[A-Za-z]{3,}"/>
 						</div>
 						<div class="wrapper_right_personal_form_cvc">
 							<div class="wrapper_right_personal_form_cvc_strip"></div>
 							<div class="wrapper_right_personal_form_cvc_num">
 								Код CVV2/CVC2<br/>
-								<input name="cvc" size="9" pattern="\d{3}" maxlength="3" required/>
-								<div class="clr"></div>
+								<div class="wrapper_right_personal_form_cvc_num_inner">
+									<input type="text" name="cvc" size="9" pattern="\d{3}" maxlength="3" required/>
+									<img src="img/question.png" alt="hint" title="Введите 3 цифры указанные на обратной стороне карты"/>
+								</div>
 							</div>
 						</div>
 						<div class="clr"></div>
-					<input type="submit" class="wrapper_right_personal_button" value="Оплатить" onsubmit="check();">
+						<input type="submit" class="wrapper_right_personal_button" value="Оплатить"/>
+
 					</form>
 			</div>
+			<!-- Block with additional information -->
 			<div class="wrapper_right_footer">
-			<p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-			<br/>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-			<br/>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-			<br/>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+				<p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+				<p>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+				<p>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+				<p>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
 			</div>
 		</div>
 		<div class="clr"></div>
 	</div>
-<script type="text/javascript">
-	function checkForm(x){
-			var form = x;
-			var flag = true;
-			for(var i=0; i < form.length; i++){
-				if(form.elements[i].type != "select-one" && form.elements[i].value == ""){
-					flag = false;
-					form.elements[i].style.border = "1px solid red";
-				}
-			}
-			
-	
-		  if(flag) form.submit();
-		  else {
-			alert("Заполните все поля!");
-		  }
-}
-	</script>
 </body>
 </html>

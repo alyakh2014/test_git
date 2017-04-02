@@ -1,8 +1,22 @@
-/*The common styles for the whole document*/
+/*
+Styles for every screen have been taken into account in this file
+since the owner of the page may wish to change them as he likes and make them different for different screens
+*/
 
+
+/*The common styles for the whole document*/
 body{
 	background:black;
 	position:relative;
+}
+
+@font-face {
+	font-family: openSansBold;
+	src: url("../fonts/open-sans-bold.eot") /* EOT for IE */
+}
+@font-face {
+	font-family: openSansBold;
+	src: url("../fonts/open-sans-bold.ttf") /* TTF for CSS3 browsers */
 }
 
 .clr{
@@ -17,18 +31,14 @@ body{
 	color:rgb(132,148,171);
 }
 
-.width_25{
-	width:25%;
-}
-
-/*Styles of the main content*/
+/*Styles of the main content for all screens*/
 .wrapper{
 	margin:auto;
 	padding:auto;
 	position:relative;
 }
 
-/*Styles of the left panel - menu*/
+/*Styles of the left panel - menu Styles for all screens*/
 .wrapper_left{
 	height:100%;
 	background:rgb(25,28,36);
@@ -36,7 +46,6 @@ body{
 
 .wrapper_left_menu{
 	list-style:none;
-
 }
 
 .wrapper_left_menu_item:hover, .wrapper_left_menu_item_active,.wrapper_left_menu_item:last-child{
@@ -46,6 +55,8 @@ body{
 .wrapper_left_menu_item>a{
 	color:white;
 	text-decoration:none;
+	font-family:openSansBold, Verdana, Arial, sans-serif;
+	font-size:0.9em;
 }
 
 .wrapper_left_menu_item>a:hover, .wrapper_left_menu_item_active>a, .wrapper_left_menu_item:last-child>a{
@@ -53,14 +64,13 @@ body{
 	text-decoration:none;
 }
 
-/*Styles of the right panel - menu*/
+/*Styles for the right side of the page*/
 .wrapper_right{
 	height:100%;
 	background:rgb(247,248,248);
 	position:relative;
+	font-family: Arial, Helvetica, sans-serif;
 }
-
-/*Styles of the right panel - menu*/
 
 .wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
 	position:relative;
@@ -69,6 +79,18 @@ body{
 .wrapper_right_personal{
 	color:rgb(132,148,171);
 }
+
+h2{
+	font-family:openSansBold, Verdana, Arial, sans-serif;
+	margin-top:0;
+	color:black;
+}
+
+input.wrapper_right_personal_button{
+	font-family:openSansBold, Verdana, Arial, sans-serif;
+}
+
+/*Styles for the part of the page with cvc code*/
 
 .wrapper_right_personal_form_cvc_strip{
 	background:rgb(228,233,238);
@@ -79,37 +101,53 @@ body{
 	width:60%;
 	text-align:right;
 	font-size:0.9em;
-	}
+}
 
+.wrapper_right_personal_form_cvc_num_inner{
+	position:relative;
+}
+
+.wrapper_right_personal_form_cvc_num_inner img{
+	position:absolute;
+	top:10%;
+	right:2px;
+	z-index:10;
+	height:80%;
+}
+
+/*Styles for submit button*/
 .wrapper_right_personal_button{
 	background:rgb(0,83,177);
 	color:white;
 }
 
+/*Styles for the part of the page with additional information*/
 .wrapper_right_footer{
 	background:rgb(55,60,67);
 	color:rgb(153,153,153);
+	font-size:0.7em;
 }
+
+/*Styles for big screens*/
 
 @media screen and (min-width:1000px)
 {
-/*Common styles*/	
-	
+/*Common styles*/
+
 input, select{
 	padding:5px;
 }
 
 .sm_margin{
 	margin:5px auto;
-	padding:0px;
+	padding:0;
 }	
-	
 .wrapper{
 	width:80%;
 }
-	
-/*Styles of the left panel - menu*/
 
+
+/*Styles of the left panel - menu*/
 .wrapper_left{
 	width:30%;
 }
@@ -121,8 +159,7 @@ input, select{
 	margin-left:-40px;
 }
 
-/*Styles of the right panel - menu*/
-
+/*Styles for the right side of the page*/
 .wrapper_right{
 	width:70%;
 }
@@ -131,20 +168,55 @@ input, select{
 		padding:20px;
 }
 
+.wrapper_right_header_info_key{
+	width:25%;
+	color: rgb(153,153,153);
+	float:left;
+}
+
+.wrapper_right_header_info_value{
+		float:left;
+}
+
+
+/*Styles for the block with personal data*/
 .wrapper_right_personal_form_card{
 	position:absolute;
-	z-index:10;
-	top:25%;
+	z-index:20;
+	top:20%;
 	display:inline-block;
 	width:52%;
 	border:1px solid #eee;
 	background:rgb(247,248,248);
 }
 
+.wrapper_right_personal_form_card_select select{
+	width:100px;
+	background:none;
+	border:none;
+}
+
+.wrapper_right_personal_form_card_select{
+	float:left;
+	overflow: hidden;
+	height: 100%;
+	background: white url("../img/arrow.png") 90% center no-repeat;
+	background-size: auto 50%;
+	width: 70px;
+	border:1px solid rgb(153,153,153);
+	margin-right:2px;
+}
+
 .wrapper_right_personal_form_card_name{
 	width:90%;
 }
 
+.wrapper_right_personal_form_card{
+		border-radius:20px;
+		padding:10px 10px 30px;
+}
+
+/*Styles for the part of the page with cvc code*/
  .wrapper_right_personal_form_cvc{
 	float:right;
 	display:inline-block;
@@ -154,14 +226,9 @@ input, select{
 	overflow:hidden;
 }
 
-.wrapper_right_personal_form_card{
+.wrapper_right_personal_form_cvc{
 	border-radius:20px;
-	padding:10px 10px 30px;
-}
-
- .wrapper_right_personal_form_cvc{
-	border-radius:20px;
-	padding:10px 30px 100px;
+	padding:20px 30px 100px;
 }
 
 .wrapper_right_personal_form_cvc_strip{
@@ -173,17 +240,24 @@ input, select{
 	margin-right:-5px;
 }
 
+.wrapper_right_personal_form_cvc_num_inner{
+	position:relative;
+}
+
+/*Styles for submit button*/
 .wrapper_right_personal_button{
 	border-radius:20px;
 	padding:5px 25px;
 }
 
+/*Styles for the part of the page with additional information
 .wrapper_right_footer{
-	font-size:0.7em;
-}
+	font-size:0.8em;
+}*/
 
 }
 
+/*Styles for screens from 768px to 1000px*/
 @media screen and (min-width: 768px) and (max-width: 1000px)
 {
 /*Common styles*/	
@@ -194,14 +268,14 @@ input, select{
 	
 .sm_margin{
 	margin:5px auto;
-	padding:0px;
+	padding:0;
 }	
 	
 .wrapper{
 	width:100%;
 }
-/*Styles of the left panel - menu*/
 
+/*Styles of the left panel - menu*/
 .wrapper_left{
 	width:30%;
 }
@@ -214,7 +288,6 @@ input, select{
 }
 
 /*Styles of the right panel*/
-
 .wrapper_right{
 	width:70%;
 }
@@ -223,21 +296,50 @@ input, select{
 	padding:20px;
 }
 
+.wrapper_right_header_info_key{
+		width:25%;
+		color: rgb(153,153,153);
+		float:left;
+}
 
+.wrapper_right_header_info_value{
+		float:left;
+}
+
+/*Styles for the block of personal data*/
 .wrapper_right_personal_form_card{
 	position:absolute;
 	z-index:10;
-	top:25%;
+	top:20%;
 	display:inline-block;
 	width:52%;
 	border:1px solid #eee;
 	background:rgb(247,248,248);
+	border-radius:20px;
+	padding:10px 10px 30px;
 }
 
 .wrapper_right_personal_form_card_name{
 	width:90%;
 }
+.wrapper_right_personal_form_card_select select{
+		width:100px;
+		background:none;
+		border:none;
+}
 
+.wrapper_right_personal_form_card_select{
+		float:left;
+		overflow: hidden;
+		height: 100%;
+		background: white url("../img/arrow.png") 90% center no-repeat;
+		background-size: auto 50%;
+		width: 60px;
+		border:1px solid rgb(153,153,153);
+		margin-right:2px;
+}
+
+/*Styles for the part of the page with cvc code*/
  .wrapper_right_personal_form_cvc{
 	float:right;
 	display:inline-block;
@@ -247,45 +349,34 @@ input, select{
 	overflow:hidden;
 }
 
-
-
-.wrapper_right_personal_form_card{
-	border-radius:20px;
-	padding:10px 10px 30px;
-}
-
 .wrapper_right_personal_form_cvc_strip{
 	min-height:30px;
 	margin:10px -30px;
 }
-
 
  .wrapper_right_personal_form_cvc{
 	border-radius:20px;
 	padding:10px 30px 100px;
 }
 
-.wrapper_right_personal_form_cvc_strip{
-	min-height:30px;
-	margin:10px -30px;
-}
-
 .wrapper_right_personal_form_cvc_num{
 	margin-right:-5px;
 }
 
+/*Styles for submit button*/
 .wrapper_right_personal_button{
 	border-radius:20px;
 	padding:5px 25px;
 }
 
+/*Styles for the part of the page with additional information
 .wrapper_right_footer{
 	font-size:0.9em;
+}*/
 }
 
-}
-
-@media screen and (min-width: 480px) and (max-width: 768px){
+/*Styles for screens from 480px to 768px*/
+@media screen and (min-width: 480px) and (max-width: 767px){
 	
 input, select{
 	padding:5px;
@@ -293,7 +384,7 @@ input, select{
 	
 .sm_margin{
 	margin:5px auto;
-	padding:0px;
+	padding:0;
 }	
 	
 .wrapper{
@@ -323,6 +414,20 @@ input, select{
 	padding:20px;
 }
 
+.wrapper_right_header_info_key{
+		width:45%;
+		color: rgb(153,153,153);
+		float:left;
+		text-align: right;
+		margin-right:5%;
+}
+
+.wrapper_right_header_info_value{
+		float:left;
+		text-align: left;
+}
+
+/*Styles of the block with personal data*/
 .wrapper_right_personal_form_card{
 	position:relative;
 	width:70%;
@@ -331,33 +436,34 @@ input, select{
 	background:rgb(247,248,248);
 }
 
+.wrapper_right_header, .wrapper_right_personal h2{
+		text-align:center;
+}
+
 .wrapper_right_personal_form_card_name{
 	width:90%;
 }
 
+.wrapper_right_personal_form_card{
+		border-radius:20px;
+		padding:30px 30px 50px;
+}
+
+
  .wrapper_right_personal_form_cvc{
-	 position:relative;
+	position:relative;
 	width:70%;
 	margin:auto;
 	border:1px solid #eee;
 	background:rgb(247,248,248);
 	overflow:hidden;
-}
-
-.wrapper_right_personal_form_card{
 	border-radius:20px;
-	padding:30px 30px 50px;
+	padding:30px 30px 150px;
 }
 
 .wrapper_right_personal_form_cvc_strip{
 	min-height:30px;
 	margin:10px -30px;
-}
-
-
- .wrapper_right_personal_form_cvc{
-	border-radius:20px;
-	padding:30px 30px 150px;
 }
 
 .wrapper_right_personal_form_card input.wrapper_right_personal_form_card_num{
@@ -368,19 +474,28 @@ input, select{
 	width:42%;
 }
 
-.wrapper_right_personal_form_card select{
-	width:15%;
+.wrapper_right_personal_form_card_select select{
+		width:100px;
+		background:none;
+		border:none;
 }
 
-.wrapper_right_personal_form_cvc_strip{
-	min-height:30px;
-	margin:10px -30px;
+.wrapper_right_personal_form_card_select{
+		float:left;
+		overflow: hidden;
+		height: 100%;
+		background: white url("../img/arrow.png") 90% center no-repeat;
+		background-size: auto 50%;
+		width: 70px;
+		border:1px solid rgb(153,153,153);
+		margin-right:2px;
 }
 
 .wrapper_right_personal_form_cvc_num{
 	margin-right:-5px;
 }
 
+/*Styles for submit button*/
 .wrapper_right_personal_button{
 	border-radius:20px;
 	padding:5px 25px;
@@ -388,12 +503,14 @@ input, select{
 	margin-top: 20px;
 }
 
+/*Styles for the part of the page with additional information
 .wrapper_right_footer{
 	font-size:0.9em;
+}*/
 }
 
-}
-@media screen and (max-width:480px)
+/*Styles for small screens*/
+@media screen and (max-width:479px)
 {
 input, select{
 	padding:5px;
@@ -401,7 +518,7 @@ input, select{
 	
 .sm_margin{
 	margin:5px auto;
-	padding:0px;
+	padding:0;
 }	
 	
 .wrapper{
@@ -416,25 +533,46 @@ input, select{
 .wrapper_left_menu_item{
 	padding-top:20px;
 	padding-bottom:20px;
-	padding-left:0px;
+	padding-left:0;
 	margin-left:-40px;
 	text-align:center;
 }
 
 /*Styles of the right panel*/
-
 .wrapper_right{
 	width:100%;
 }
 
-.wrapper_right_header, .wrapper_right_personal h1{text-align:center;}
-
-.flt_left{width:100%;}
+.wrapper_right_header, .wrapper_right_personal h2{
+	text-align:center;
+}
 
 .wrapper_right_personal, .wrapper_right_header, .wrapper_right_footer{
 	padding:5px;
 }
 
+.wrapper_right_header_info_key{
+		color: rgb(153,153,153);
+}
+
+.wrapper_right_personal_form_card_select select{
+		width:100px;
+		background:none;
+		border:none;
+}
+
+.wrapper_right_personal_form_card_select{
+		float:left;
+		overflow: hidden;
+		height: 100%;
+		background: white url("../img/arrow.png") 90% center no-repeat;
+		background-size: auto 50%;
+		width: 70px;
+		border:1px solid rgb(153,153,153);
+		margin-right:2px;
+}
+
+/*Styles for the block with personal data of the user*/
 .wrapper_right_personal_form_card{
 	position:relative;
 	width:90%;
@@ -447,6 +585,7 @@ input, select{
 	width:90%;
 }
 
+/*Styles for the part of the page with cvc code*/
  .wrapper_right_personal_form_cvc{
 	 position:relative;
 	width:90%;
@@ -454,24 +593,14 @@ input, select{
 	border:1px solid #eee;
 	background:rgb(247,248,248);
 	overflow:hidden;
+	border-radius:20px;
+	padding:30px 10px 80px;
 }
 
 .wrapper_right_personal_form_card{
 	border-radius:20px;
-	padding:10px 10px 10px;
+	padding:20px 10px 30px;
 }
-
-.wrapper_right_personal_form_cvc_strip{
-	min-height:30px;
-	margin:10px -30px;
-}
-
-
- .wrapper_right_personal_form_cvc{
-	border-radius:20px;
-	padding:30px 10px 50px;
-}
-
 
 .wrapper_right_personal_form_cvc_strip{
 	min-height:30px;
@@ -482,6 +611,7 @@ input, select{
 	margin-right:-5px;
 }
 
+/*Styles for submit button*/
 .wrapper_right_personal_button{
 	border-radius:20px;
 	padding:5px 25px;
@@ -489,7 +619,8 @@ input, select{
 	margin-top: 20px;
 }
 
+/*Styles for the part of the page with additional information
 .wrapper_right_footer{
 	font-size:0.9em;
-}
+}*/
 }
